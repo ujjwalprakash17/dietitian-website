@@ -40,8 +40,8 @@ const Form = (prop) => {
 
   const onSubmit = async (data) => {
     const myRoute = prop.isTrue
-      ? `http://localhost:5500/login`
-      : `http://localhost:5500/register`;
+      ? `https://dietitian-website01.vercel.app/login`
+      : `https://dietitian-website01.vercel.app/register`;
     try {
       const response = await axios.post(myRoute, data);
       const tokenVal = response.data.token;
