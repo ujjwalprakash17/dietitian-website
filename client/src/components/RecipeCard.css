@@ -1,0 +1,54 @@
+/* RecipeCard.css */
+.recipe-book {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    transition: transform 0.3s ease;
+  }
+  
+  .recipe-book:hover {
+    transform: scale(1.1); /* Scale up on hover */
+  }
+  
+  .recipe-book .recipe-method,
+  .recipe-book .ingredients-list {
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .recipe-book:hover .recipe-method,
+  .recipe-book:hover .ingredients-list {
+    display: block;
+  }
+  
+  .recipe-book:hover .recipe-title {
+    display: none; /* Hide title on hover */
+  }
+  
+  .recipe-book .recipe-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .recipe-book:hover .recipe-title {
+    opacity: 0; /* Hide title on hover */
+  }
+  
+  .recipe-book .recipe-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .recipe-book:hover .recipe-content {
+    opacity: 1;
+  }
+  
