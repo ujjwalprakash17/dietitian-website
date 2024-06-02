@@ -7,7 +7,10 @@ import path from 'path';
 const app = express();
 
 //Middlewares
-app.use(cors());
+app.use(cors({
+  origin: ["https://dietitian-website-cyan.vercel.app/"],
+  methods : ["POST", "GET"],
+}));
 app.use(bodyParser.json({ extended: true }));
 
 //Connect to the database
